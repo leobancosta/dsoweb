@@ -1,0 +1,25 @@
+<div class="container h-100">
+  <div class="row align-items-center h-100 mt-n5">
+    <div class="col-5 mx-auto">
+      <form class="form-signin" [formGroup]="loginForm" (ngSubmit)="onSignInClick()">
+        <div class="text-center">
+          <img [src]="brandLogoPath" class="img-fluid" alt="Brand Logo" width="320" height="320">
+        </div>
+        <div class="form-label-group my-4">
+          <input type="email" id="loginEmail" class="form-control border border-2 border-light rounded-pill p-sm-4"
+            placeholder="Email Address" formControlName="loginEmail" required autofocus>
+        </div>
+        <div class="form-label-group my-4">
+          <input type="password" id="loginPassword"
+            class="form-control border border-2 border-light rounded-pill p-sm-4" formControlName="loginPassword"
+            placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn btn-lg btn-light btn-block rounded-pill my-4"><b>SIGN
+            IN</b></button>
+        <p class="mb-3 text-muted text-center">Forgot password? Click <a href="#">here</a></p>
+        <p class="mt-lg-5 mb-2 text-muted text-center">DelEx Dummy Web Application by DevSecOps Squad</p>
+        <p class="text-muted text-center">© 2019</p>
+      </form>
+    </div>
+  </div>
+</div>

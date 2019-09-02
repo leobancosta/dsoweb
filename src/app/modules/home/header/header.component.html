@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" [routerLink]="['dashboard']">
+        <img [src]="brandLogoPath" class="img-fluid" alt="Brand Logo" width="150" height="150">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+      </ul>
+      <ul class="navbar-nav navbar-right">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['dashboard']">Home</a>
+        </li>
+        <!-- <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['squad']">Squads</a>
+        </li> -->
+        <!-- <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['project']">Projects</a>
+        </li> -->
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['member']">Members</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" data-reference="parent">
+          </a>
+          <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" [routerLink]="['../login']">Log Out</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

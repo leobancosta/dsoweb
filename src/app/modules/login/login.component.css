@@ -1,0 +1,39 @@
+body.login {
+    background-color: black;
+}
+
+input {
+  background: transparent;
+  display: block;
+  color: rgb(206, 206, 206);
+}
+
+input:focus {
+  background: transparent;
+  display: block;
+  color: rgb(206, 206, 206);
+}
+
+input::placeholder {
+  color: rgb(206, 206, 206);
+}
+
+.border-2 {
+  border-width: 2px !important;
+}
+
+::-webkit-input-placeholder {
+  color: #666;
+}
+
+:-moz-placeholder {
+  color: #666;
+}
+
+::-moz-placeholder {
+  color: #666;
+}
+
+:-ms-input-placeholder {
+  color: #666;
+}

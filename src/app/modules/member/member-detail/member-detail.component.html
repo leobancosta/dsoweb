@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-12">
+    <h1>{{member.s_firstname }} {{ member.s_lastname }}</h1>
+  </div>
+</div>
+<!-- <div class="row">
+  <div class="col-12">
+    {{member.s_role}}
+  </div>
+</div> -->
+<div class="row">
+  <div class="col-12">
+    {{member.s_email}}
+  </div>
+</div>
+<div class="row mt-5">
+  <div class="col-12">
+    <div class="btn-group" data-toggle="dropdown">
+      <button type="button" class="btn btn-primary dropdown-toggle">
+        Manage Member
+      </button>
+      <ul class="dropdown-menu">
+        <li class="dropdown-item" style="cursor: pointer" (click)="onEditMemberClick()">Edit Member</li>
+        <li class="dropdown-item" style="cursor: pointer" (click)="onDeleteMemberClick()">Delete Member</li>
+      </ul>
+    </div>
+  </div>
+</div>
