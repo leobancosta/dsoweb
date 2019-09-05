@@ -23,15 +23,16 @@ export class LoginService {
 
       let params = new HttpParams({
         fromObject: {
-          email: s_username,
-          password: s_password,
+          empEmail: s_username,
+          empPassword: s_password,
           retries: this.loginRetries.toString()
         }
       });
 
       //enter get api here
       //api:/dso/gateway/v1/empLogin
-      return this.apiService.createPostRequest('employee/register', params).pipe(
+      //return this.apiService.createPostRequest('employee/register', params).pipe(
+      return this.apiService.createPostRequest('employee/login', params).pipe(
         catchError(err => {
           console.log(err);
           return throwError({
