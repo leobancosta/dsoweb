@@ -1,5 +1,5 @@
 FROM node:12.9.0-stretch AS builder
-echo 'just testing!!!'
+echo 'just testing!!   !'
 COPY . ./dso-ui
 WORKDIR /dso-ui
 RUN npm install
