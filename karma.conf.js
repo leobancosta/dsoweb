@@ -25,10 +25,10 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome','ChromeHeadless'],
+    browsers: ['Chrome','Chrome_without_security'],
     customLaunchers: {
       MyHeadlessChrome: {
-        base: 'ChromeHeadless',
+        base: 'Chrome',
         flags: ['--disable-translate', '--disable-extensions', '--remote-debugging-port=9223']
       }
     },
