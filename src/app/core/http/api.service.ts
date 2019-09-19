@@ -13,7 +13,7 @@ export class ApiService {
   constructor(private http: HttpClient) {
     this.baseURL = environment.baseURL;
     this.httpHeaders = new HttpHeaders({
-      'Content-Type': 'application/x-www-form-urlencoded',//'application/json',
+      'Content-Type': 'application/json',//'x-www-form-urlencoded',
       'Authorization': environment.token,
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT'
@@ -37,11 +37,11 @@ export class ApiService {
     
   }
 
-  createPostRequest(endpoint: string, requestBody: HttpParams) {
+  createPostRequest(endpoint: string, requestBody: object) {
     const options = {
-      headers: this.httpHeaders,
-      body: requestBody
+      headers: this.httpHeaders
     }
+    console.log(requestBody);
     return this.http.post(this.apiURL(endpoint), requestBody, options);
   }
 
