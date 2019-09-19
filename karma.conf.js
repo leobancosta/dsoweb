@@ -17,7 +17,7 @@ module.exports = function (config) {
     },
     coverageIstanbulReporter: {
       dir: require('path').join(__dirname, './coverage/DelExDummyApp-UI'),
-      reports: ['html', 'lcovonly', 'text-summary'],
+      reports: ['html', 'lcovonly'],
       fixWebpackSourcePaths: true
     },
     reporters: ['progress', 'kjhtml'],
@@ -25,14 +25,16 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome','Chrome_without_security'],
+	browserNoActivityTimeout: 30000,
+    browsers: [
+      chromeHeadlessSupported ? 'ChromeHeadless' : 'Chrome'
+    ],
     customLaunchers: {
-      Chrome_without_security: {
-        base: 'Chrome',
-        flags: ['--disable-translate', '--disable-extensions', '--remote-debugging-port=9223']
-      }
+		ChromeHeadless: {
+			base: 'Chrome',
+			flags: ['--no-sandbox', '--headless', '--disable-gpu', '--remote-debugging-port=9222']
+		}
     },
-    singleRun: false,
-    restartOnFileChange: true
+    singleRun: true
   });
 };
