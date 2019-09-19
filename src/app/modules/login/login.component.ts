@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
     this.loginService.loginUser(this.loginForm.value['loginEmail'], this.loginForm.value['loginPassword'])
       .subscribe((response) => {
         console.log(response);
-        if (response["success"]) {
+        if (response["success"] || response["authenticated"]) {
           this.router.navigate(['main/dashboard']);
         } else {
           alert(response["message"]);
