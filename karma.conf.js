@@ -27,7 +27,7 @@ module.exports = function (config) {
     autoWatch: true,
     browsers: ['Chrome','Chrome_without_security'],
     customLaunchers: {
-      MyHeadlessChrome: {
+      Chrome_without_security: {
         base: 'Chrome',
         flags: ['--disable-translate', '--disable-extensions', '--remote-debugging-port=9223']
       }
